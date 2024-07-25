@@ -6,7 +6,7 @@ interface SubTitleProps {
 
 export default function SubTitle({ subTitle }: SubTitleProps) {
     return (
-        <h1 className="text-tertiary font-normal">
+        <h1 className="text-tertiary font-medium">
             {subTitle}
         </h1>
     );

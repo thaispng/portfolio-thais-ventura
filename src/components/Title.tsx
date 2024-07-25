@@ -6,7 +6,7 @@ interface TitleProps {
 
 export default function Title({ title }: TitleProps) {
     return (
-        <h1 className="text-primary font-semibold">
+        <h1 className="flex w-full text-primary font-semibold">
             {title}
         </h1>
     );
