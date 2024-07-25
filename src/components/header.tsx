@@ -20,8 +20,8 @@ export default function Header() {
   };
 
   return (
-    <header className="w-full flex flex-row fixed justify-end items-center px-6 py-7 h-[43px] bg-transparent ">
-      <div className="flex items-center">
+    <header className="w-full flex container-bg  flex-row  justify-end items-center px-6 py-1  ">
+      <div className="flex items-center py-1">
         <button className="text-neutral-500 hover:text-neutral-400" onClick={handle}>
           {theme === 'light' ? <Moon size={24} /> : <Sun size={24} />}
         </button>
