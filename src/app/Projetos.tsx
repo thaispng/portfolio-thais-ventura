@@ -19,7 +19,7 @@ export default function Inicial() {
               <img className="rounded-md" src="/front-automacao.png" alt="HTML" width={250} height={250} />
             </div>
           </div>
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-1 w-full">
             <div className="flex flex-col pb-2 w-full">
             <div className="flex flex-row w-full justify-between">
               <p className="text-primary font-semibold break-all whitespace-normal">
