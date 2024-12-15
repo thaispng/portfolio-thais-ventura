@@ -13,24 +13,34 @@ export default function Inicial() {
           </h1>
           <SubTitle subTitle="Trabalhos Pessoais Desenvolvidos." />
         </div>
-        <div className="flex flex-row container-bg-tertiary w-full h-full py-4 px-4 rounded-md gap-4">
-          <div className="flex">
+        <div className="flex flex-col md:flex-row container-bg-tertiary w-full h-full py-4 px-4 rounded-md gap-4">
+          <div className="flex justify-center md:justify-start">
             <div className="container-bg-tertiary p-2 rounded-md flex justify-center items-center">
-              <img className="rounded-md" src="/front-automacao.png" alt="HTML" width={250} height={250} />
+              <img
+                className="rounded-md"
+                src="/front-automacao.png"
+                alt="HTML"
+                width={250}
+                height={250}
+              />
             </div>
           </div>
           <div className="flex flex-col gap-1 w-full">
             <div className="flex flex-col pb-2 w-full">
-            <div className="flex flex-row w-full justify-between">
-              <p className="text-primary font-semibold break-all whitespace-normal">
-                Sistema de Automação
-              </p>
-              <a href="https://front-automation-cad.vercel.app/" target="_blank" rel="noopener noreferrer">
-                <button>
-                  <IconLink size={20} color="#5B5B5B" strokeWidth={2} />
-                </button>
-              </a>
-            </div>
+              <div className="flex flex-row w-full justify-between">
+                <p className="text-primary font-semibold break-all whitespace-normal">
+                  Sistema de Automação
+                </p>
+                <a
+                  href="https://front-automation-cad.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button>
+                    <IconLink size={20} color="#5B5B5B" strokeWidth={2} />
+                  </button>
+                </a>
+              </div>
               <p className="text-secondary">
                 Sistema de Automação de Processos de uma empresa de pequeno porte.
               </p>
