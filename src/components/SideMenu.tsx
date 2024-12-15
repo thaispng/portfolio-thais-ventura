@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Title from "./Title";
 import SubTitle from "./SubTitle";
@@ -14,11 +15,29 @@ import {
   Folder,
   Download,
 } from "lucide-react";
-import Button from "./Button";
 
-export default function SideMenu() {
+
+interface SideMenuProps {
+  className?: string;
+}
+
+
+export default function SideMenu({
+  className,
+}: SideMenuProps = {
+    className: "",
+  }) {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
-    <div className="flex flex-col w-auto h-full justify-between items-center p-5 container-bg rounded-md border-color border-2">
+    <div className="flex flex-col w-auto h-full sticky top-5 justify-between items-center p-5 container-bg rounded-md border-color border-2">
       <div className="flex flex-col gap-3">
         <div className="flex flex-col justify-center items-center">
           <div className="flex justify-center items-center h-auto py-3">
@@ -32,7 +51,7 @@ export default function SideMenu() {
         <div className="flex flex-col">
           <Title title="Informações de contato" />
           <div className="flex flex-row gap-2 w-full py-1 px-2 justify-start items-center">
-            <Linkedin className="text-tertiary"  size={20} strokeWidth={1.5} />
+            <Linkedin className="text-tertiary" size={20} strokeWidth={1.5} />
             <a
               className="text-tertiary font-normal"
               href="https://www.linkedin.com/in/sstv/"
@@ -80,50 +99,34 @@ export default function SideMenu() {
         </div>
         <div className="flex flex-col gap-2">
           <Title title="Navegação" />
-          <Link href="../app/Inicial" legacyBehavior>
-            <a className="flex w-full gap-2 justify-start items-center button-transparent py-2 px-2 text-tertiary font-normal rounded-sm">
-              <House size={20} strokeWidth={1.5} />
-              Inicial
-            </a>
-          </Link>
-          <Link href="../app/SobreMim" legacyBehavior>
-            <a className="flex w-full gap-2 justify-start items-center button-transparent py-2 px-2 text-tertiary font-normal rounded-sm">
-              <PersonStanding size={20} strokeWidth={1.5} />
-              Sobre mim
-            </a>
-          </Link>
-          <Link href="../app/Habilidades" legacyBehavior>
-            <a className="flex w-full gap-2 justify-start items-center button-transparent py-2 px-2 text-tertiary font-normal rounded-sm">
-              <Brain size={20} strokeWidth={1.5} />
-              Habilidades
-            </a>
-          </Link>
-          <Link href="../app/Experiencias" legacyBehavior>
-            <a className="flex w-full gap-2 justify-start items-center button-transparent py-2 px-2 text-tertiary font-normal rounded-sm">
-              <BriefcaseBusiness size={20} strokeWidth={1.5} />
-              Experiências
-            </a>
-          </Link>
-          <Link href="../app/Projetos" legacyBehavior>
-            <a className="flex w-full gap-2 justify-start items-center button-transparent py-2 px-2 text-tertiary font-normal rounded-sm">
-              <Folder size={20} strokeWidth={1.5} />
-              Projetos
-            </a>
-          </Link>
-          <div className="flex w-full py-2">
-            <a
-              href="/thais_ventura.pdf"
-              download="thais_ventura.pdf"
-              className="w-full"
-            >
-              <Button
-                text="Baixar currículo"
-                variant="primary"
-                size="medium"
-                fullWidth={true}
-              />
-            </a>
-          </div>
+          <button
+            onClick={() => scrollToSection("inicial")}
+            className="flex w-full gap-2 justify-start items-center button-transparent py-2 px-2 text-tertiary font-normal rounded-sm"
+          >
+            <House size={20} strokeWidth={1.5} />
+            Inicial
+          </button>
+          <button
+            onClick={() => scrollToSection("habilidades")}
+            className="flex w-full gap-2 justify-start items-center button-transparent py-2 px-2 text-tertiary font-normal rounded-sm"
+          >
+            <Brain size={20} strokeWidth={1.5} />
+            Habilidades
+          </button>
+          <button
+            onClick={() => scrollToSection("experiencia")}
+            className="flex w-full gap-2 justify-start items-center button-transparent py-2 px-2 text-tertiary font-normal rounded-sm"
+          >
+            <BriefcaseBusiness size={20} strokeWidth={1.5} />
+            Experiências
+          </button>
+          <button
+            onClick={() => scrollToSection("projetos")}
+            className="flex w-full gap-2 justify-start items-center button-transparent py-2 px-2 text-tertiary font-normal rounded-sm"
+          >
+            <Folder size={20} strokeWidth={1.5} />
+            Projetos
+          </button>
         </div>
       </div>
       <div className="flex flex-row justify-center items-center w-full py-4">

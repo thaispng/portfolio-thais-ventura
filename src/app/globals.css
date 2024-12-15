@@ -8,7 +8,7 @@
   --primary-rgb: 239, 239, 239;
   --secondary-rgb: 47, 47, 47;
   --text-primary: 0, 0, 0;
-  --text-secondary:  60, 60, 60;
+  --text-secondary: 60, 60, 60;
   --text-tertiary: 75, 75, 75;
   --container-primary: 250, 250, 250;
   --container-secondary: 226, 232, 240, 0.4;
@@ -87,6 +87,12 @@ body {
 }
 .button-transparent:hover {
   background-color: rgba(var(--container-tertiary));
+}
+
+.sticky-side-menu {
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
 }
 @layer utilities {
   .text-balance {
