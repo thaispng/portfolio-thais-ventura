@@ -3,7 +3,7 @@ import SubTitle from "@/components/SubTitle";
 import { Link as IconLink } from 'lucide-react';
 import Link from 'next/link';
 
-export default function Inicial() {
+export default function Projetos() {
   return (
     <>
       <div className="container-bg gap-10 rounded-md border-color border-2 flex flex-col w-full items-start justify-start p-10">
