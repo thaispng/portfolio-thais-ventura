@@ -37,8 +37,8 @@ export default function SideMenu({
   };
 
   return (
-    <div className="flex flex-col w-auto h-full sticky top-5 justify-between items-center p-5 container-bg rounded-md border-color border-2">
-      <div className="flex flex-col gap-3">
+    <div className="flex flex-col w-auto h-full lg:sticky lg:top-5 justify-between items-center p-5 container-bg rounded-md border-color border-2">
+      <div className="flex flex-col gap-3 ">
         <div className="flex flex-col justify-center items-center">
           <div className="flex justify-center items-center h-auto py-3">
             <img src="/FemaleMemojis.svg" alt="HTML" width={150} height={150} />
