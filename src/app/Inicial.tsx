@@ -27,16 +27,16 @@ export default function Inicial() {
                         Sou entusiasta de novas tecnologias e estou sempre em busca de aprimorar minhas habilidades e conhecimentos. Conecto-me frequentemente com a comunidade de tecnologia através do meu LinkedIn e compartilho meus projetos no GitHub.
                     </p>
                 </div>
-                <div className="flex flex-row w-full justify-around py-10">
-                    <div className="flex flex-col ">
-                        <h1 className="text-[32px] font-extrabold text-[#9C42AB] ">
+                <div className="flex flex-col md:flex-row w-full justify-around py-10">
+                    <div className="flex flex-col items-center">
+                        <h1 className="text-[32px] font-extrabold text-[#9C42AB]">
                             2+
                         </h1>
                         <p className="text-tertiary">
                             Anos de Experiência
                         </p>
                     </div>
-                    <div className="flex flex-col">
+                    <div className="flex flex-col items-center mt-6 md:mt-0">
                         <h1 className="text-[32px] font-extrabold text-[#9C42AB]">
                             5+
                         </h1>
@@ -44,7 +44,7 @@ export default function Inicial() {
                             Projetos realizados
                         </p>
                     </div>
-                    <div className="flex flex-col">
+                    <div className="flex flex-col items-center mt-6 md:mt-0">
                         <h1 className="text-[32px] font-extrabold text-[#9C42AB]">
                             3
                         </h1>
@@ -53,6 +53,7 @@ export default function Inicial() {
                         </p>
                     </div>
                 </div>
+
             </div>
         </>
     );
